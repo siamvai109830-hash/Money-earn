@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -625,24 +625,4 @@
                 tg.showConfirm(`আপনি কি আপনার উইথড্র অনুরোধ জমা দিতে চান?`, (confirmed) => {
                     if (confirmed) {
                         let newEarnings = parseFloat(localStorage.getItem('earnings')) - amount;
-                        localStorage.setItem('earnings', newEarnings.toString());
-                        
-                        tg.sendData(JSON.stringify({ 
-                            type: 'withdrawal', 
-                            amount: amount, 
-                            method: document.getElementById('withdraw-method').value,
-                            account: document.getElementById('account-number').value
-                        }));
-                        
-                        withdrawForm.reset();
-                        updateUI();
-                        tg.showAlert('আপনার উইথড্র অনুরোধ সফলভাবে জমা হয়েছে।');
-                    }
-                });
-            });
-
-            updateUI();
-        });
-    </script>
-</body>
-</html>
+                        localStorage.setItem
